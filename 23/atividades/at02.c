@@ -2,9 +2,9 @@
 #include <locale.h>
 
 int main (){
-	setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "Portuguese");
 float salario, gratificacao, imposto, salarioReceber;
-//
+printf("Eberth da Silva Rodrigues\n ");
 printf("Digite o salario do funcionario:");
 scanf("%f%*c", &salario);
 
@@ -19,3 +19,4 @@ printf("\nSalario a receber : %0.2f", salarioReceber);
 getchar();
 return 0;
 }
+

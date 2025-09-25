@@ -2,9 +2,9 @@
 #include <locale.h>
 
 int main (){
-	setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "Portuguese");
 float deposito, taxa, rendimento, total;
-//
+printf("Eberth da Silva Rodrigues\n ");
 printf("Digite o valor do deposito:");
 scanf("%f%*c", &deposito);
 
