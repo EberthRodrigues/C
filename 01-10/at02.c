@@ -1,37 +1,25 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main()
-{
-    setlocale(LC_ALL, "Portuguese");
-
-    int ano_contratacao = 2020;
-    int ano_atual;
-    float salarioInicial = 1000.0;
-    float percentual_aumento = 1.5;
-    float salario_atual = salarioInicial;
-
-	printf("Eberth da Silva Rodrigues");
-    printf("\nDigite o ano atual: ");
-    scanf("%d", &ano_atual);
-    if (ano_atual < ano_contratacao)
-    {
-        printf("Ano invalido. O ano atual deve ser maior ou igual a %d.\n", ano_contratacao);
-        return 1;
-    }
-
-while (ano_contratacao < ano_atual );{
-	ano_contratacao++;
-	salario_atual += salario_atual * (percentual_aumento / 100.0);
+main() {
+	setlocale(LC_ALL, "Portuguese");
 	
-	if(ano_contratacao >= 2022){
-		
-		percentual_aumento *= 2;
+	int ano_contratado = 2020, ano_desejado, cont = 0;
+	float salario = 1000, aumento = 0.015;
 	
+    printf("Eberth da Silva Rodrigues");
+	printf("Digite o ano que você deseja saber o salário do funcionário com  aumento(s): ");
+	scanf("%d%*c", &ano_desejado);
+	
+	printf("\nO funcionário foi contratado em %d, recebendo R$%0.2f!", ano_contratado, salario);
+	
+	while (ano_contratado < ano_desejado) {
+		salario += salario * aumento;
+		aumento += aumento;
+		cont++;
+		ano_contratado++;	
 	}
-}
-    printf("O salario atual do funcionario em %d é de R$ %.2f\n", ano_atual,salario_atual);
+	
+	printf("\nAo salário do funcionário é de: R$%0.2f",  salario);
 
-    return 0;
 }
-
