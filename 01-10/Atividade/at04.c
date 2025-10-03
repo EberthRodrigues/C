@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include <locale.h>
-#include <stdbool.h>
-
-// Autor: Eberh da Silva Rodrigues
 
 int main() {
     setlocale(LC_ALL,"Portuguese");
@@ -12,9 +9,9 @@ int main() {
     int i;
 
     for (i = 1; i <= 12; i++) {
-        printf("\n============================");
+        printf("\n-----------------------");
         printf("\nProduto %d", i);
-        printf("\n============================");
+        printf("\n-----------------------");
 
         printf("\nDigite o preço unitário: ");
         scanf("%f", &preco);
@@ -27,19 +24,19 @@ int main() {
 
         // Custo
         if (preco < 20) {
-            if (categoria=='A' or categoria=='a') custo = 2;
-            else if (categoria=='L' or categoria=='l') custo = 3;
+            if (categoria=='A' || categoria=='a') custo = 2;
+            else if (categoria=='L' || categoria=='l') custo = 3;
             else custo = 4;
         } else if (preco <= 50) {
-            if (refrigeracao=='S' or refrigeracao=='s') custo = 6;
+            if (refrigeracao=='S' || refrigeracao=='s') custo = 6;
             else custo = 0;
         } else {
-            if (refrigeracao=='S' or refrigeracao=='s') {
-                if (categoria=='A' or categoria=='a') custo = 5;
-                else if (categoria=='L' or categoria=='l') custo = 2;
+            if (refrigeracao=='S' || refrigeracao=='s') {
+                if (categoria=='A' || categoria=='a') custo = 5;
+                else if (categoria=='L' || categoria=='l') custo = 2;
                 else custo = 4;
             } else {
-                if (categoria=='L' or categoria=='l') custo = 1;
+                if (categoria=='L' || categoria=='l') custo = 1;
                 else custo = 0;
             }
         }

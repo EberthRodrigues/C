@@ -1,0 +1,2 @@
+2 - Faca um programa que receba a temperatura media de cada mes do ano, armazenando em um vetor. Verifique e mostre a maior e menor temperatura do ano e em que 
+mes ocorraram (Mostrar o mes Janeiro, feveriro... desconsidere impates). -> um for, um swich case um while
