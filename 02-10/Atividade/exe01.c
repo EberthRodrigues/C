@@ -3,23 +3,31 @@
 #include <stdio.h>
 
 int main() {
-    int v[8], n, i, j, pos, count = 0;
+    int vetor[8];
+    int numero, indice, indiceAuxiliar, posicao, contador = 0;
 
-    while (count < 8) {
-        printf("Digite o %dº número: ", count + 1);
-        scanf("%d", &n);
+    while (contador < 8) {
+        printf("Digite o %dº número: ", contador + 1);
+        scanf("%d", &numero);
 
-        pos = 0;
-        while (pos < count && v[pos] < n) pos++;
+        posicao = 0;
+        while (posicao < contador && vetor[posicao] < numero) {
+            posicao++;
+        }
 
-        for (j = count; j > pos; j--) v[j] = v[j-1];
+        for (indiceAuxiliar = contador; indiceAuxiliar > posicao; indiceAuxiliar--) {
+            vetor[indiceAuxiliar] = vetor[indiceAuxiliar - 1];
+        }
 
-        v[pos] = n;
-        count++;
+        vetor[posicao] = numero;
+        contador++;
     }
 
-    printf("\nVetor em ordem crescente: ");
-    for (i = 0; i < 8; i++) printf("%d ", v[i]);
+    printf("\nNúmeros em ordem crescente:\n");
+    for (indice = 0; indice < 8; indice++) {
+        printf("%d ", vetor[indice]);
+    }
 
+    printf("\n");
     return 0;
 }
