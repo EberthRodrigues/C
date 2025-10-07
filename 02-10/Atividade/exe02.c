@@ -9,17 +9,14 @@ int main() {
     int mesMaior = 0, mesMenor = 0;
     float maior, menor;
 
-    // Lê as temperaturas de cada mês (usando while)
     while (i < 12) {
         printf("Digite a temperatura média do mês %d: ", i + 1);
         scanf("%f", &temp[i]);
         i++;
     }
 
-    // Define valores iniciais
     maior = menor = temp[0];
 
-    // Encontra maior e menor (usando for)
     for (i = 1; i < 12; i++) {
         if (temp[i] > maior) {
             maior = temp[i];
@@ -31,7 +28,6 @@ int main() {
         }
     }
 
-    // Mostra resultados (usando switch case pros nomes dos meses)
     printf("\nMaior temperatura: %.1f°C em ", maior);
     switch (mesMaior) {
         case 0: printf("Janeiro"); break;
