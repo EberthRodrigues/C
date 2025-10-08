@@ -88,19 +88,3 @@ int main() {
 
 
 
-#include <stdio.h>
-#include <locale.h>
-
-int main(){
-	setlocale(LC_ALL, "Portuguese");
-	
-int x = 0;
-
-do {
-	printf("Valor de x = %d \n ", x);
-	x=x+1;
-} 
-	while(x!=5);
-	printf("Valor de x depois de sair da estrutura: %d", x);
-	
-}
