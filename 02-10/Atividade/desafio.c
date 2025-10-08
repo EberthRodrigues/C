@@ -8,16 +8,16 @@ int main() {
     int encontrou;
 
     for (indice = 0; indice < 10; indice++) {
-        printf("Digite o código da conta %d: ", indice + 1);
+        printf("Digite o codigo da conta %d: ", indice + 1);
         scanf("%d", &codigos[indice]);
         printf("Digite o saldo inicial da conta %d: ", indice + 1);
         scanf("%f", &saldos[indice]);
     }
 
     do {
-        printf("\n1 - Efetuar depósito\n");
+        printf("\n1 - Efetuar deposito\n");
         printf("2 - Efetuar saque\n");
-        printf("3 - Consultar ativo bancário\n");
+        printf("3 - Consultar ativo bancario\n");
         printf("4 - Finalizar programa\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
@@ -37,11 +37,11 @@ int main() {
                     }
                 }
                 if (!encontrou)
-                    printf("Conta não encontrada\n");
+                    printf("Conta nao encontrada\n");
                 break;
 
             case 2:
-                printf("Digite o código da conta para saque: ");
+                printf("Digite o codigo da conta para saque: ");
                 scanf("%d", &codigoDigitado);
                 encontrou = 0;
                 for (indice = 0; indice < 10; indice++) {
@@ -66,7 +66,7 @@ int main() {
                 for (indice = 0; indice < 10; indice++) {
                     valor += saldos[indice];
                 }
-                printf("Ativo bancário total: %.2f\n", valor);
+                printf("Ativo bancario total: %.2f\n", valor);
                 break;
 
             case 4:
@@ -74,9 +74,33 @@ int main() {
                 break;
 
             default:
-                printf("Opção inválida\n");
+                printf("Opcao invalida\n");
         }
     } while (opcao != 4);
 
     return 0;
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
+int x = 0;
+
+do {
+	printf("Valor de x = %d \n ", x);
+	x=x+1;
+} 
+	while(x!=5);
+	printf("Valor de x depois de sair da estrutura: %d", x);
+	
 }
